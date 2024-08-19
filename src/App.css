@@ -36,3 +36,35 @@
     transform: rotate(360deg);
   }
 }
+
+.scrolling-container::-webkit-scrollbar {
+  display: none; /* Esconde a barra de rolagem no Chrome, Safari e Opera */
+}
+
+.scrolling-container {
+  -ms-overflow-style: none; /* Esconde a barra de rolagem no Internet Explorer e Edge */
+  scrollbar-width: none; /* Esconde a barra de rolagem no Firefox */
+}
+
+.scrolling-container {
+  padding-left: 2rem; /* Ajuste conforme necessário para o botão da esquerda */
+  padding-right: 2rem; /* Ajuste conforme necessário para o botão da direita */
+}
+
+.scroll-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #ffffff;
+  border-radius: 9999px; /* Botões circulares */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.scroll-button-left {
+  left: -2rem; /* Posiciona o botão da esquerda fora da área de rolagem */
+}
+
+.scroll-button-right {
+  right: -2rem; /* Posiciona o botão da direita fora da área de rolagem */
+}
